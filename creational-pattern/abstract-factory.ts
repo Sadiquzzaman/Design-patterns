@@ -1,3 +1,10 @@
+/*
+It is like a super factory that creates families of related products. 
+Imagine you're designing a game, and you need different types of characters, weapons, and vehicles. 
+Instead of creating these objects directly, you use an abstract factory to create them in a consistent way. 
+This allows you to ensure that all the products you create are compatible and work well together. 
+*/
+
 abstract class Car {
   abstract drive(): void;
 }
@@ -58,3 +65,20 @@ sportsVehicles.motorcycle.ride();
 
 cruiserVehicles.car.drive();
 cruiserVehicles.motorcycle.ride();
+
+// Difference between factory and abstract-factory:
+
+/*
+Factory Method:
+
+1. Creation of a single product
+2. Subclassing
+3. One type of product
+
+
+Abstract Factory:
+
+1. Creation of product families
+2. Composition of factories
+3. Multiple types of products
+*/
