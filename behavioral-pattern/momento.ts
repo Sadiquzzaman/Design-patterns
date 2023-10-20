@@ -6,7 +6,6 @@ This is useful for implementing features like "undo" or saving and restoring the
 
 */
 
-// Originator class (the object whose state we want to save and restore)
 class Editor {
   private content: string = "";
 
@@ -27,7 +26,6 @@ class Editor {
   }
 }
 
-// Memento class (stores the state)
 class Memento {
   constructor(private content: string) {}
 
@@ -36,7 +34,6 @@ class Memento {
   }
 }
 
-// Caretaker class (manages and stores the mementos)
 class EditorHistory {
   private mementos: Memento[] = [];
 
@@ -49,15 +46,14 @@ class EditorHistory {
   }
 }
 
-// Usage
 const editor = new Editor();
-const editorHistory = new EditorHistory(); // Rename 'history' to 'editorHistory'
+const editorHistory = new EditorHistory();
 
 editor.setContent("State 1");
-editorHistory.push(editor.save()); // Save state 1
+editorHistory.push(editor.save());
 
 editor.setContent("State 2");
-editorHistory.push(editor.save()); // Save state 2
+editorHistory.push(editor.save());
 
 editor.setContent("State 3");
 console.log("Current content:", editor.getContent());
