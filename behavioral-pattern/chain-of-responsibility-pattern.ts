@@ -1,11 +1,9 @@
 /*
-
 It allows you to pass a request through a series of handlers,
  each capable of either processing the request or passing it to the next handler in the chain. 
  
 It provides a way to decouple senders and receivers of requests, 
 allowing multiple objects to handle a request without knowing which one will do so.
-
 */
 
 interface Handler {
