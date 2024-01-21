@@ -1,9 +1,7 @@
 /*
-
 The Adapter pattern is like a bridge between two incompatible interfaces. 
 It allows objects with different interfaces to work together. 
 You can think of it as a translator that makes one interface look like another, enabling them to collaborate seamlessly.
-
 */
 
 class VLCPlayer {
